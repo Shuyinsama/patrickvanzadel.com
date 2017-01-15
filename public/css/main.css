@@ -29,7 +29,7 @@ form button[type="submit"] {
   margin-top: 1em;
 }
 
-#app {
+.homeLayout {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -42,38 +42,275 @@ form button[type="submit"] {
   background-size: cover;
 }
 
-.list-inline {
+.aboutLayout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 20px solid rgba(255, 255, 255, 1);
+  background: rgba(36, 36, 36, 1);
+}
+
+.navigationWrapper {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: none;
+}
+
+.homeHeading {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeHeadingTitle {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.homeHeadingSubtitle {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.homeHeadingMenu {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.homeHeadingMenu li {
   display: inline-block;
-  padding-left: 0;
-  list-style: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 1);
 }
 
-.list-inline > li {
-  display: inline-block;
-  padding: 0 5px;
+.homeHeadingMenu li:last-child {
+  border-right: unset;
 }
 
-.container {
-  padding-right: 2rem;
-  padding-left: 2rem;
+.homeHeadingMenu li a {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
 }
 
-.text-success {
-  color: #29b35b;
+.homeHeadingMenu li a:hover {
+  text-decoration: underline;
 }
 
-.text-danger {
-  color: #b61b17;
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
 
-.text-info {
-  color: #31708f;
+@media (min-width: 768px) {
+  .homeHeading {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .homeHeading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .homeHeadingTitle {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 0px;
+    line-height: 48px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .homeHeadingSubtitle {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .homeHeadingMenu {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .homeHeadingMenu li {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .homeHeadingMenu li:last-child {
+    border-right: unset;
+  }
+
+  .homeHeadingMenu li a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+  }
+
+  .homeHeadingMenu li a:hover {
+    text-decoration: underline;
+  }
 }
 
-.avatar {
-  margin-right: 5px;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  vertical-align: middle;
+@media (min-width: 992px) {
+  .navigationWrapper {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: block;
+  }
+
+  .mainNavigation {
+    text-align: right;
+  }
+
+  .mainNavigation li {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .mainNavigation li a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+  }
+
+  .mainNavigation li a:hover {
+    text-decoration: underline;
+  }
+
+  .homeHeading {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .homeHeadingTitle {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: 0px;
+    line-height: 63px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .homeHeadingSubtitle {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .homeHeadingMenu {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .homeHeadingMenu li {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .homeHeadingMenu li:last-child {
+    border-right: unset;
+  }
+
+  .homeHeadingMenu li a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+  }
+
+  .homeHeadingMenu li a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

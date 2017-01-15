@@ -7,6 +7,9 @@ class Home extends React.Component {
     return (
       <div className="homeLayout">
         <Messages messages={this.props.messages}/>
+        <div className="home--image">
+          <img src="./images/programming.jpg" className="img-responsive" />
+        </div>
         <div className="homeHeading">
           <h1 className="homeHeadingTitle"><span className="blink">></span> Patrick van Zadel</h1>
           <h2 className="homeHeadingSubtitle">Software developer</h2>

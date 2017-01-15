@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Code for patrickvanzadel.com",
   "author": "Patrick van Zadel <patrick.van.zadel@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shuyinsama/patrickvanzadel.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Shuyinsama/patrickvanzadel.com/issues"
+  },
   "scripts": {
     "build": "gulp build",
     "build:production": "gulp build --production",
